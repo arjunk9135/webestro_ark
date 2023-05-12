@@ -1,0 +1,59 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav" mode="side">
+    <!-- Sidenav content -->
+      <br>
+      <br>
+      <a style="color: rgb(255, 255, 255); margin-left: 1px;" mat-list-item href="#" ><img src="https://cdn.iconscout.com/icon/free/png-256/home-house-main-page-building-address-location-1-2618.png?f=webp&w=256" style="width: 30px; height: 30px;">&nbsp;&nbsp;Home</a><br><br>
+      <a mat-list-item href="#">   <img src="https://www.freeiconspng.com/thumbs/analytic-icon/analytic-icon-14.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Analytics</a> <br><br>
+      <a mat-list-item href="#">   <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Cloud-icon.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Cloud API Sync  </a> <br><br>
+      <a mat-list-item href="#">   <img src="https://cdn-icons-png.flaticon.com/512/603/603156.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Database </a> <br><br>
+      <a mat-list-item href="#">   <img src="https://cdn-icons-png.flaticon.com/512/3649/3649611.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Review Plan </a> <br><br>
+      <a mat-list-item href="#">   <img src="https://cdn-icons-png.flaticon.com/512/675/675918.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Hosting</a> <br><br>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: rgb(36, 36, 43); color: aliceblue;">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon> 
+      </button>
+      <!-- Toolbar content -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" style="justify-content:right;">
+        <div class="container-fluid" style="color: aliceblue;">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </mat-toolbar>
+    <!-- Main content -->
+    <app-admindashboard></app-admindashboard>
+  </mat-sidenav-content>
+</mat-sidenav-container>

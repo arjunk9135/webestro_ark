@@ -1,0 +1,45 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false" style="background-color: #3b7ad1; color: aliceblue;">
+    <mat-toolbar style="color:aliceblue"><img src="https://cdn-icons-png.flaticon.com/512/5065/5065709.png" style="width: 40px; height: 40px; ">&nbsp;&nbsp;Menu</mat-toolbar>
+    <mat-nav-list>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        >
+        <mat-icon aria-label="Side nav toggle icon" >menu</mat-icon>
+      </button>
+      <a style="color: rgb(255, 255, 255); margin-left: 1px;" mat-list-item href="#" ><img src="https://cdn.iconscout.com/icon/free/png-256/home-house-main-page-building-address-location-1-2618.png?f=webp&w=256" style="width: 30px; height: 30px;">&nbsp;&nbsp;Home</a><br>
+      <a mat-list-item href="#">   <img src="https://www.freeiconspng.com/thumbs/analytic-icon/analytic-icon-14.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Analytics</a> <br>
+      <a mat-list-item href="#">   <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Cloud-icon.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Cloud API Sync  </a> <br>
+      <a mat-list-item href="#">   <img src="https://cdn-icons-png.flaticon.com/512/603/603156.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Database </a> <br>
+      <a mat-list-item href="#">   <img src="https://cdn-icons-png.flaticon.com/512/3649/3649611.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Review Plan </a> <br>
+      <a mat-list-item href="#">   <img src="https://cdn-icons-png.flaticon.com/512/675/675918.png" style="width: 30px; height: 30px;">&nbsp;&nbsp;Hosting</a> <br>
+      
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: #27282c" color="white;" >
+      <button style="color: white;"
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon" >menu</mat-icon>
+      </button>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Estro_rgb.jpg" style="width: 80px; height: 40px;">
+      <span style="color: white;">
+        &nbsp;&nbsp;Welcome Admin!
+      </span>
+      <!-- nav-->
+      
+      
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <app-dashboard></app-dashboard>
+  </mat-sidenav-content>
+</mat-sidenav-container>
